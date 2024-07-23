@@ -1,0 +1,340 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+	 cursor: url('cursor.png'), auto; /* Replace 'caduceus_cursor.png' with your actual image file */
+    background-image: url('background.jpg'); /* Replace 'background.jpg' with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Keeps the background image fixed while scrolling */
+    margin-top: 80px; /* Adjust top margin to match header height */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.titileh1{
+    font-size: 50px;
+}
+
+.hermersimg{
+    width: 30%;
+    height: auto;
+}
+
+.whohermesh2{
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+    color: #333; /* Adjust text color to contrast with the background */
+    padding: 10px 0;
+    width: 100%;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex; /* Ensure logo and nav items align in the same line */
+    align-items: center;
+    padding-left: 10px; /* Adjust logo padding as needed */
+}
+
+.logo img {
+    height: 50px; /* Adjust the height of the logo as needed */
+    width: 50px; /* Ensure the logo remains circular */
+    border-radius: 50%; /* Creates a circular shape */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between; /* Spread out items */
+    align-items: center;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none; /* Hide by default on larger screens */
+    padding: 10px;
+    font-size: 1.2rem;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: transform 0.3s;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none; /* Remove bullet points */
+    margin-left: auto; /* Push nav items to the right */
+    align-items: center;
+}
+
+.nav-list ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex;
+    padding: 0;
+}
+
+.nav-list li {
+    margin-left: 20px;
+}
+
+.nav-list li:first-child {
+    margin-left: 0; /* Reset margin for the first item */
+}
+
+.nav-list li a {
+    color: #333; /* Adjust link color */
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for color */
+}
+
+.nav-list li a:hover {
+    background-color: #333; /* Background color on hover */
+    color: #fff; /* Text color on hover */
+}
+
+.section {
+    text-align: center; /* Center align section content */
+    padding: 105px 100px 60px; /* Adjust top padding to create space for the fixed header */
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background for sections */
+}
+
+.section h1, .section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out; /* Animation on hover */
+}
+
+.section p {
+    margin-bottom: 4px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.intro {
+    font-size: 1.2rem;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.translator-btn {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.translator-btn:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.8); /* Translucent white background for footer */
+    color: #333; /* Adjust text color */
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Display menu toggle button */
+    }
+
+    .nav-menu {
+        flex-direction: row; /* Ensure items are in a row for larger screens */
+        align-items: center;
+    }
+
+    .nav-list {
+        display: none; /* Hide nav list by default on smaller screens */
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust top spacing */
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.8); /* Translucent white background */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-list.active {
+        display: flex; /* Show nav list when active */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .nav-list ul {
+        list-style-type: none; /* Remove bullet points */
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px; /* Padding inside the dropdown menu */
+        background-color: #f9f9f9; /* Background color for the dropdown menu */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for dropdown menu */
+    }
+
+    .nav-list li {
+        margin: 0;
+        text-align: center; /* Center align menu items */
+    }
+
+    .nav-list li a {
+        padding: 15px 20px; /* Adjust padding for mobile view */
+        display: block; /* Ensure menu items stack vertically */
+        color: #333; /* Adjust link color */
+        text-decoration: none;
+        font-size: 1.2rem;
+        border-radius: 5px; /* Rounded corners */
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition for color */
+    }
+
+    .nav-list li a:hover {
+        background-color: #333; /* Background color on hover */
+        color: #fff; /* Text color on hover */
+    }
+
+    .close-btn {
+        display: none; /* Hide close button by default */
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.2rem;
+        padding: 10px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1100; /* Ensure it appears above other elements */
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-toggle {
+        display: none; /* Hide menu toggle button on larger screens */
+    }
+
+    .nav-list {
+        display: flex !important; /* Ensure nav list is always visible on larger screens */
+    }
+}
+
+
+.product-card {
+            background-color: #f9f9f973;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .product-card form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-card label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .product-card input[type="text"] {
+            padding: 10px;
+            font-size: 1.2rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .product-card button {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+        }
+
+        .product-card button:hover {
+            background-color: #555;
+        }
+
+        #translation-result {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+
+
+	
+
+
+
+
+
+
